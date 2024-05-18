@@ -1,6 +1,8 @@
 
 
 const jwt = require('jsonwebtoken');
+
+// if you going to use this in a real project you should keep this save in .env or somthing alse
 const JWT_SECRET = 'eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTcxNjA1Njg0MCwiaWF0IjoxNzE2MDU2ODQwfQ.3oy1LmG-hu3l0KZDIjlEjuYzgBhXxrUTbS5J9Yx7M5c'; // You should use an environment variable for this
 
 module.exports = (req, res, next) => {
