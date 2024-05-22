@@ -11,14 +11,15 @@ const cartRoutes = require('./routes/bag_routes');
 const contactRoutes = require('./routes/contact_routes')
 connectDB();
 
-app.use(express.json());
-app.use(authRoutes)
 // app.use(authMiddleware, productRouter);
-app.use(productRouter);
-app.use('/cart', cartRoutes);
 
-// Contact routes
-app.use(contactRoutes);
+app.use(express.json());
+app.use(authRoutes) // auth routes
+app.use(productRouter); // products routes
+app.use('/cart', cartRoutes); // shopping card routes
+
+
+app.use(contactRoutes); // contact routes
 
 
 app.listen(port, ()=> {
