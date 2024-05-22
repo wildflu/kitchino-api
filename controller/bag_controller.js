@@ -3,7 +3,6 @@
 const User = require('../model/user');
 const Product = require('../model/product');
 
-// 6648ff3501a50fea0bb2896e
 
 class cartController{
     async addToCart (req, res) {
