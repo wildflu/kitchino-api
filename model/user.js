@@ -11,7 +11,8 @@ const userSchema = new mongoose.Schema({
             productId: { type: mongoose.Schema.Types.ObjectId, ref: 'Product' },
             quantity: { type: Number, required: true }
         }
-    ]
+    ],
+    isAdmin: { type: Boolean, default: false }
 });
 
 userSchema.pre('save', async function (next) {

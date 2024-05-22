@@ -8,6 +8,7 @@ const connectDB = require('./helpers/mongoose_connection')
 const authMiddleware = require('./helpers/middleware');
 const authRoutes = require('./routes/auth_routes')
 const cartRoutes = require('./routes/bag_routes');
+const contactRoutes = require('./routes/contact_routes')
 connectDB();
 
 app.use(express.json());
@@ -15,6 +16,9 @@ app.use(authRoutes)
 // app.use(authMiddleware, productRouter);
 app.use(productRouter);
 app.use('/cart', cartRoutes);
+
+// Contact routes
+app.use(contactRoutes);
 
 
 app.listen(port, ()=> {

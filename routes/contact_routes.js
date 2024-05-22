@@ -4,8 +4,8 @@
 
 const express = require('express');
 const router = express.Router();
-const contactController = require('../controllers/contactController');
-const authMiddleware = require('../middleware/authMiddleware');
+const contactController = require('../controller/contact_controller');
+const authMiddleware = require('../helpers/middleware');
 
 // Route to create a new contact message
 router.post('/contact', authMiddleware, contactController.createContact);
